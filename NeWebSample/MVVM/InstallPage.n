@@ -1,0 +1,48 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Nemerle;
+using NemerleWeb;
+using System.Collections.Concurrent;
+
+
+namespace NeWebSample
+{
+/// <summary>
+/// Description of InstallPage.
+/// </summary>
+    [Unit]
+    class InstallPage
+    {
+        Samples : List[string] { get; set; }
+
+        public this()
+        {
+            Samples = 
+                         [
+                             "List of names", 
+                             "List of names2", 
+                             "List of names3"
+                         ].ToList();
+        }
+
+        [Html]
+        public View() : string
+        {
+            //<#
+            //<span> Installing... </span>
+            //#>
+
+            <# 
+                      <table >
+                <tbody>
+                  <tr $foreach(r in Samples)>
+                    <td>$(r.ToString())</td>
+                  </tr>
+                </tbody>
+              </table>
+            #>
+        }  
+
+    }
+}

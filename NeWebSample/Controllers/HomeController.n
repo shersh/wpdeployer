@@ -1,0 +1,39 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.Mvc;
+using System.IO;
+
+using Nemerle;
+using NemerleWeb;
+
+namespace NeWebSample
+{
+    public class HomeController : Controller
+    {
+        public Index() : ActionResult 
+        {      
+            View((nweb SamplesPage()) : object);
+        }
+        
+        public Install() : ActionResult 
+        {      
+            View((nweb InstallPage()) : object);
+        }
+
+        [HttpPost]
+        public Index( file : HttpPostedFileBase) : ActionResult 
+        {
+            when (file.ContentLength > 0) 
+            {
+                def fileName = Path.GetFileName(file.FileName);
+                def path = Path.Combine(Server.MapPath("~/Uploads"), fileName);
+                file.SaveAs(path);
+            }
+
+            RedirectToAction("Install");
+        }
+
+    }
+}
