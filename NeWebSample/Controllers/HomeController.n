@@ -14,7 +14,7 @@ namespace NeWebSample
     {
         public Index() : ActionResult 
         {      
-            View((nweb SamplesPage()) : object);
+            View((nweb IndexPage()) : object);
         }
         
         public Install() : ActionResult 
@@ -29,6 +29,11 @@ namespace NeWebSample
             {
                 def fileName = Path.GetFileName(file.FileName);
                 def path = Path.Combine(Server.MapPath("~/Uploads"), fileName);
+                when(File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+                
                 file.SaveAs(path);
             }
 

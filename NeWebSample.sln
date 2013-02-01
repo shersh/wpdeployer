@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "NeWebSample", "NeWebSample\NeWebSample.nproj", "{3253CC18-AE43-4586-889B-1F0B30E20FDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BD3179EA-C3E1-472D-B1C0-E0DAEDC9B901}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "WindowsPhoneDeployer.Core", "WindowsPhoneDeployer.Core\WindowsPhoneDeployer.Core.nproj", "{19B9BC2D-EB21-41BD-96BD-52F345D5C1C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3253CC18-AE43-4586-889B-1F0B30E20FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3253CC18-AE43-4586-889B-1F0B30E20FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3253CC18-AE43-4586-889B-1F0B30E20FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3253CC18-AE43-4586-889B-1F0B30E20FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19B9BC2D-EB21-41BD-96BD-52F345D5C1C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19B9BC2D-EB21-41BD-96BD-52F345D5C1C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19B9BC2D-EB21-41BD-96BD-52F345D5C1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19B9BC2D-EB21-41BD-96BD-52F345D5C1C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

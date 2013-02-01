@@ -1,0 +1,61 @@
+﻿using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+using Microsoft.SmartDevice.MultiTargeting.Connectivity;
+using System.Globalization;
+using System.Collections.ObjectModel;
+
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Concurrency;
+
+namespace WindowsPhoneDeployer.Core
+{
+    //[Unit]
+    //public class Deployer
+    //{
+    //    private this()
+    //    {
+    //        Devices = GetDevices();
+    //        _ = Observable
+    //                   .Timer(TimeSpan.FromSeconds(5))
+    //                   .Subscribe( (_) => { Devices = GetDevices(); });
+    //    }
+
+    //    mutable static _inst : Deployer;
+
+    //    public static Instance : Deployer
+    //    {
+    //        get 
+    //        {
+    //            when(_inst == null) _inst = Deployer();
+
+    //            _inst;
+    //        }
+    //    }
+
+    //    mutable devices : List[ConnectableDevice];
+        
+    //    public Devices : List[ConnectableDevice] 
+    //    {
+    //        get { devices; }    
+    //        private set { devices = value; }
+    //    }
+
+    //    public GetDevices() : List[ConnectableDevice]
+    //    {
+    //        def connectivity = MultiTargetingConnectivity(CultureInfo.CurrentUICulture.LCID);
+    //        connectivity.GetConnectableDevices(true).Where( device => !device.IsEmulator()).ToList();
+    //    }
+
+    //    public InstallApplication(devId : string) : void
+    //    {
+
+    //    }
+    //}
+}

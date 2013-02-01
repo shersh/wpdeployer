@@ -12,7 +12,7 @@ namespace NeWebSample
 /// Description of InstallPage.
 /// </summary>
     [Unit]
-    class InstallPage
+    public class InstallPage
     {
         Samples : List[string] { get; set; }
 
