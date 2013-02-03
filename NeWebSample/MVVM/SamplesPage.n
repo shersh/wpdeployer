@@ -26,13 +26,14 @@ namespace NeWebSample
     {
         Devices : List[string] { get; set; }
 
-        SelectSample : string { get; set; }
+        Applications : List[string] {get;set;}
 
         File : object  {get;set;}
 
         public this()
         {
             ReceiveDevices();
+            ReceiveApplications();
         }
 
         public class Server
@@ -53,6 +54,7 @@ namespace NeWebSample
                     {
                         try
                         {
+                            //TODO: добавить парсинг айдишника из xap файла
                             def appId = Guid.Parse("{63743eb7-2a26-47f1-9d3c-32bfe42a52a9}");
                             def idev = device.Connect();
                             when(idev.IsApplicationInstalled(appId))
@@ -61,6 +63,8 @@ namespace NeWebSample
                             }
                             def iconPath = "";
                             def xapPackage = "";
+
+                            //TODO: добавить поиск папки
                             def file = Directory.GetFiles(@"C:\Users\user\Documents\Visual Studio 2012\Projects\NeWebSample\NeWebSample\Uploads").First();
 
                             _ = idev.InstallApplication(appId, appId, "NormalApp", iconPath, file);
@@ -75,8 +79,15 @@ namespace NeWebSample
 
                 true;
             }
+
+           
         }
 
+        ReceiveApplications() : void
+        {
+            
+        }
+        
         ReceiveDevices() : void
         {
             server.GetDevices(devs => Devices = devs);
@@ -91,6 +102,8 @@ namespace NeWebSample
         public View() : string
         {
                 <#
+                
+
                 <form action="" method="post" enctype="multipart/form-data">
 
                   <label for="file">Filename:</label>
